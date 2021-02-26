@@ -2,24 +2,18 @@
 import './App.css';
 import Ex1 from './hw1902/Ex1'
 import Ex2 from './hw1902/Ex2'
+import Ex3 from './practical1902/Ex3'
+import Ex5 from './components/Ex5'
+import Ex6 from './components/Ex6'
+import Ex7 from './components/Ex7'
 
 function App() {
   return (
     <div className="App">
-      <Ex1 
-        ccsClass = "big-square"
-        label = "Привет"
-      />
-      <Ex1 
-        ccsClass = "square"
-        label = "Привет"
-      />
-      <Ex1 
-        ccsClass = "small-square"
-        label = "Привет"
-      />
-      <Ex2 />
-      
+     <Ex5/>
+     <Ex6 className = {true}/>
+     <Ex7 />
+
     </div>
   );
 }
