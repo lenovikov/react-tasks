@@ -1,7 +1,8 @@
 import React from 'react'
+import Spinner from './spinner.js'
 
 
-class Spiner extends React.Component {
+class SpinSelection extends React.Component {
 
     state = {
         value: true
@@ -13,9 +14,9 @@ class Spiner extends React.Component {
 
     render() {
         return(
-            <button onClick={this.change} className={this.state.value? 'loader loader-animated' : '' }>1</button>
+            <button onClick={this.change}>{this.state.value? <Spinner />:1 }</button>
         )
     }
 }
 
-export default Spiner
+export default SpinSelection

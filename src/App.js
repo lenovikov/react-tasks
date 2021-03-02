@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App">
      <Ex5/>
-     <Ex6 className = {true}/>
-     <Ex7 />
+     <Ex6 value = {true}/>
+     <Ex7 position = 'right'/>
 
     </div>
   );

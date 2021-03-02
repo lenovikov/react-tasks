@@ -1,15 +1,16 @@
 import React from 'react'
+import Spinner from './spinner.js'
 
 
-class Spiner extends React.Component {
+class SpinSelection extends React.Component {
 
 
     render() {
         return(
-            <button  className={this.props.className? 'loader loader-animated' : '' }>1</button>
+        <button>{this.props.value?<Spinner/>:1}</button>
         )
     }
 }
 
 
-export default Spiner
+export default SpinSelection
