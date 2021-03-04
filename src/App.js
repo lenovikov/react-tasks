@@ -9,6 +9,7 @@ import Ex7 from './components/Ex7'
 import HW12602 from './components/HW12602'
 import HW22602 from './components/HW22602'
 import HW32602 from './components/HW32602'
+import HW42602 from './components/HW42602'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
      <HW12602/>
      <HW22602/>
      <HW32602/>
+     <HW42602/>
     </div>
   );
 }
