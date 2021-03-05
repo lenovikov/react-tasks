@@ -6,8 +6,8 @@ class ShowList extends React.Component {
     render(){
         return(
             <ul>
-                {this.props.state.map((item)=>{
-                    return <li key={Math.random()}>{item}</li>
+                {this.props.userList.map((item)=>{
+                    return <li>{item}</li>
                 })}
             </ul>
         )

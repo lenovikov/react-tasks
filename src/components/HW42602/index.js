@@ -20,7 +20,7 @@ class AddRandomElem extends React.Component{
         return(
             <div>
                 <button onClick={this.onClick}>click</button>
-                    <ShowList state = {this.state.people}/>
+                    <ShowList userList = {this.state.people}/>
             </div>
         )
     }
