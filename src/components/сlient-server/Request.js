@@ -5,8 +5,8 @@ import { useState } from "react"
 
 const PostRequest = ({password,tel}) => {
 
-    const [data,newData] = useState()
- 
+    const [data,newData] = useState('')
+    const [err,newErr] = useState('')
    const postReq = async(event) =>{
     event.preventDefault()
     try{
@@ -14,20 +14,19 @@ const PostRequest = ({password,tel}) => {
             phone:tel,
             password:password
         })
-        const result = await response.data.name.first
-        newData(result)
-      
-        
-    }catch(e){
-        console.log(e);
+       
+        newData(response.data.name.first)
+    
+    }catch(error){
+        newErr(error.response.data)
     }
    }
 
- 
    return(
        <div>
            <input onClick={postReq} type='submit'></input>
           <div>{data}</div>
+          <div>{err}</div>
        </div>
    )
 
