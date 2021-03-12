@@ -10,15 +10,13 @@ import HW12602 from './components/HW12602'
 import HW22602 from './components/HW22602'
 import HW32602 from './components/HW32602'
 import HW42602 from './components/HW42602'
+import HW11003 from './components/HW11003'
+import Client from './components/сlient-server'
 
 function App() {
   return (
     <div className="App">
-  
-     <HW12602/>
-     <HW22602/>
-     <HW32602/>
-     <HW42602/>
+    <Client/>
     </div>
   );
 }
