@@ -10,9 +10,13 @@ import HW12602 from './components/HW12602'
 import HW22602 from './components/HW22602'
 import HW32602 from './components/HW32602'
 import HW42602 from './components/HW42602'
+
+import HW11003 from './components/HW11003'
+import Client from './components/сlient-server'
 import HW10303 from './components/HW10303'
 import HW20303 from './components/HW20303'
 import TodoList from './components/TodoList'
+
 
 
 import {
@@ -24,6 +28,9 @@ import {
 
 export default function App() {
   return (
+    <div className="App">
+    <Client/>
+    </div>
     <Router>
       <div>
         <nav>
