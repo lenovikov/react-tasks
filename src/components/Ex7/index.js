@@ -53,7 +53,7 @@ class MutableList extends React.Component {
 
     render() {
         return (
-           this.checkPosition()
+           this.checkPosition
         )
     }
 }
