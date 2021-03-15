@@ -14,14 +14,55 @@ import HW10303 from './components/HW10303'
 import HW20303 from './components/HW20303'
 import TodoList from './components/TodoList'
 
-function App() {
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+export default function App() {
   return (
-    <div className="App">
-     <HW10303/>
-     <HW20303/>
-     <TodoList/>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">HW12602</Link>
+            </li>
+            <li>
+              <Link to="/HW22602">HW22602</Link>
+            </li>
+            <li>
+              <Link to="/HW32602">HW32602</Link>
+            </li>
+            <li>
+              <Link to="/HW42602">HW42602</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/HW32602">
+            <HW32602 />
+          </Route>
+          <Route path="/HW22602">
+            <HW22602 />
+          </Route>
+          <Route path="/HW42602">
+            <HW42602 />
+          </Route>
+          <Route path="/">
+            <HW12602 />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+
+
