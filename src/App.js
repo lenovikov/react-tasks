@@ -10,15 +10,66 @@ import HW12602 from './components/HW12602'
 import HW22602 from './components/HW22602'
 import HW32602 from './components/HW32602'
 import HW42602 from './components/HW42602'
+
 import HW11003 from './components/HW11003'
 import Client from './components/сlient-server'
+import HW10303 from './components/HW10303'
+import HW20303 from './components/HW20303'
+import TodoList from './components/TodoList'
 
-function App() {
+
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+export default function App() {
   return (
     <div className="App">
     <Client/>
     </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">HW12602</Link>
+            </li>
+            <li>
+              <Link to="/HW22602">HW22602</Link>
+            </li>
+            <li>
+              <Link to="/HW32602">HW32602</Link>
+            </li>
+            <li>
+              <Link to="/HW42602">HW42602</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/HW32602">
+            <HW32602 />
+          </Route>
+          <Route path="/HW22602">
+            <HW22602 />
+          </Route>
+          <Route path="/HW42602">
+            <HW42602 />
+          </Route>
+          <Route path="/">
+            <HW12602 />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+
+
