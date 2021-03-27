@@ -16,7 +16,8 @@ import Client from './components/сlient-server'
 import LoginForm from './components/LoginForm'
 import WorkWithForm from './components/WorkWithForm'
 import TodoList from './components/TodoList'
-
+import ModifyState from './components/ModifyState'
+import PostRequest from './components/PostRequest/form.js'
 
 
 import {
@@ -78,6 +79,12 @@ export default function App() {
             <li>
               <Link to="/TodoList">TodoList</Link>
             </li>
+            <li>
+              <Link to="/ModifyState">ModifyState</Link>
+            </li>
+            <li>
+              <Link to="/PostRequest">PostRequest</Link>
+            </li>
           </ul>
         </nav>
 
@@ -125,6 +132,12 @@ export default function App() {
           </Route>
           <Route path="/TodoList">
             <TodoList />
+          </Route>
+          <Route path="/PostRequest">
+            <PostRequest />
+          </Route>
+          <Route path="/ModifyState">
+            <ModifyState />
           </Route>
           <Route path="/">
             <Square />

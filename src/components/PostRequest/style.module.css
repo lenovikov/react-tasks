@@ -1,0 +1,11 @@
+.input__div {
+    margin: 10px 0px;
+}
+
+.form__request {
+    display:flex;
+    flex-direction: column;
+    text-align:center; 
+    max-Width:200px;
+    margin: 0 auto;
+}

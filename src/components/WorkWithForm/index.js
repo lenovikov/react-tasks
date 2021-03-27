@@ -6,7 +6,7 @@ class Form extends React.Component{
         value:''
     }
 
-    email =(event) =>{
+    changeEmail =(event) =>{
         console.log(event.target.value);
         this.setState({value:event.target.value})
     }
@@ -14,7 +14,7 @@ class Form extends React.Component{
 
     render(){
         return(
-            <input type='text' onChange={this.email} value={this.state.value}></input>
+            <input type='text' onChange={this.changeEmail} value={this.state.value}></input>
         )
     }
 }
